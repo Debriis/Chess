@@ -1,9 +1,9 @@
-// App.js
+
 import React, { useEffect, useRef, useState } from "react";
 import { Chess } from "chess.js";
 import "./App.css";
 
-// Import chess piece images
+
 import wp from "./assets/wp.png";
 import wr from "./assets/wr.png";
 import wn from "./assets/wk.png";
@@ -70,7 +70,7 @@ export default function App() {
     const square = coordsToSquare(r, c);
     const piece = gameRef.current.get(square);
 
-    // select piece of side to move
+    
     if (!selected) {
       if (piece && piece.color === gameRef.current.turn()) {
         setSelected(square);
@@ -78,13 +78,13 @@ export default function App() {
       return;
     }
 
-    // deselect if same
+    
     if (selected === square) {
       setSelected(null);
       return;
     }
 
-    // try to move
+    
     const move = { from: selected, to: square, promotion: "q" };
     const result = gameRef.current.move(move);
     if (result) {
@@ -96,7 +96,7 @@ export default function App() {
       setSelected(null);
       refreshFromGame();
     } else {
-      // if clicked another friendly piece, change selection
+      
       if (piece && piece.color === gameRef.current.turn()) {
         setSelected(square);
       }
