@@ -78,7 +78,7 @@ export default function App() {
       return;
     }
 
-    
+  //bosdk copy n kr liyo  
     if (selected === square) {
       setSelected(null);
       return;
