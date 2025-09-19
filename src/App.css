@@ -1,0 +1,93 @@
+.app {
+  height: 100vh;
+  background: white;
+  
+  font-family: sans-serif;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.controls button {
+  margin-right: 8px;
+  padding: 6px 12px;
+  border: none;
+  background: #444;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.controls button:hover {
+  background: #0F2A1D;
+}
+
+.main {
+  display: flex;
+  gap: 20px;
+}
+
+.board {
+  display: grid;
+  grid-template-rows: repeat(8, 6rem);
+  grid-template-columns: repeat(8, 6rem);
+  border: 2px solid #0F2A10;
+}
+
+.board-row {
+  display: contents;
+}
+
+.square {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.square.light {
+  background: #f7f7f3;
+}
+
+.square.dark {
+  background: #31852e;
+  color: white;
+}
+
+.square.selected {
+  outline: 3px solid yellow;
+}
+
+.chess-piece {
+  width: 5rem;
+  height: 5rem;
+  object-fit: contain;
+  pointer-events: none;
+}
+
+.sidebar {
+  flex: 1;
+  background: #fff;
+  padding: 12px;
+  border-radius: 6px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.status {
+  margin-bottom: 12px;
+  font-weight: bold;
+}
+
+.moves, .history {
+  margin-bottom: 12px;
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+.history li.current {
+  color: blue;
+  font-weight: bold;
+}
