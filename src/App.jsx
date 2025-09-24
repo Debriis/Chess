@@ -214,7 +214,7 @@ export default function App() {
             </ol>
           </div>
 
-          {/* <div className="history">
+           <div className="history">
             <h3>History Snapshots (pointer {pointer})</h3>
             <ol>
               {historyFEN.map((f, i) => (
@@ -223,7 +223,7 @@ export default function App() {
                 </li>
               ))}
             </ol>
-          </div> */}  
+          </div> 
         </div>
       </div>
     </div>
